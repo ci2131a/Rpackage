@@ -1,7 +1,11 @@
 ---
 title: "How to Build an R Package"
 author: "Charles Ingulli"
+<<<<<<< HEAD
 date: "7/7/2020"
+=======
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+>>>>>>> refs/remotes/origin/master
 output: html_document
 ---
 
@@ -107,6 +111,7 @@ Comment, comment, comment! This is very important not only so others can underst
 
 ## Help files
 
+<<<<<<< HEAD
 An important aspect of R and RStudio is the help files for all existing R functions. After creating a function for your package, it may be useful to immediately create the help file to keep track of what the function should do it and how it operates. The help files are stored in the _*man/*_ directory and consist of text files with the `.Rd` extension. The 
 
 
@@ -132,6 +137,21 @@ It is still possible to update the help files in _*man/*_ manually. This is what
 # Include Data
 
 
+=======
+An important aspect of R and RStudio is the help files for all existing R functions. After creating a function for your package, it may be useful to immediately create the help file to keep track of what the function should do it and how it operates. The help files are stored in the `man/` directory and consist of text files with the `.Rd` extension. The 
+
+'
+
+# Including Data
+
+
+# Exporting your functions
+
+Use the #' export tag above all functions that you wish to export. This will include them in the package bundle and make them available for use. Functions not exported will be bundled as internal functions. Do this for functions you may use internally as assistants to you other functions that users should not interact with.
+
+
+Once you have probably noted which functions you want to export, run `devtools::document()` to add these functions to the NAMESPACE file. This is the file that contains the list of all exported functions. It should not be written manually and should be updated by the code above. Removing already exported functions from the namespace is as simple as removing the tag and rerunning the code.
+>>>>>>> refs/remotes/origin/master
 
 # Sources
 
