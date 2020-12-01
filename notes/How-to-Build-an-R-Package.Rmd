@@ -130,14 +130,13 @@ It is recommended to use this method to update the `NAMESPACE` file rather than 
 It is still possible to update the help files in _*man/*_ manually. This is what I found to be easiest.
 
 
-# Include Data
-
 
 An important aspect of R and RStudio is the help files for all existing R functions. After creating a function for your package, it may be useful to immediately create the help file to keep track of what the function should do it and how it operates. The help files are stored in the `man/` directory and consist of text files with the `.Rd` extension. The 
 
 
 # Including Data
 
+usethis::use_data(x, mtcars)
 
 # Exporting your functions
 
