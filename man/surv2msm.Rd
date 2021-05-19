@@ -1,4 +1,3 @@
-
 \name{surv2msm}
 \alias{surv2msm}
 \title{Survival to msm format}

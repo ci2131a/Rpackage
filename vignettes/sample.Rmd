@@ -1,0 +1,29 @@
+---
+title: "sample"
+author: name
+date: June 30, 2020
+output: 
+  rmarkdown::html_vignette: default
+vignette: >
+  %\VignetteIndexEntry{sample}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+
+# Heading 1
+
+Some text.
+
+## Heading 2
+
+
+
