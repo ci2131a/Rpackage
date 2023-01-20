@@ -143,7 +143,7 @@ usethis::use_data(x, mtcars)
 Use the #' export tag above all functions that you wish to export. This will include them in the package bundle and make them available for use. Functions not exported will be bundled as internal functions. Do this for functions you may use internally as assistants to you other functions that users should not interact with.
 
 
-Once you have probably noted which functions you want to export, run `devtools::document()` to add these functions to the NAMESPACE file. This is the file that contains the list of all exported functions. It should not be written manually and should be updated by the code above. Removing already exported functions from the namespace is as simple as removing the tag and rerunning the code.
+Once you have properly noted which functions you want to export, run `devtools::document()` to add these functions to the NAMESPACE file. This is the file that contains the list of all exported functions. It should not be written manually and should be updated by the code above. Removing already exported functions from the namespace is as simple as removing the tag and rerunning the code.
 
 # Sources
 
