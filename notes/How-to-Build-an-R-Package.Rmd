@@ -1,7 +1,6 @@
 ---
 title: "How to Build an R Package"
 author: "Charles Ingulli"
-date: "7/7/2020"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: html_document
 ---
@@ -51,7 +50,7 @@ for (package in c("devtools", "roxygen2", "testthat", "knitr")){
     install.packages(package)
   } else {
     #print(paste0(package," is installed"))
-    cat(package," is already installed\n")
+    cat(package,"version",packageVersion(package), "is already installed.\n")
   }
 }
 
@@ -82,7 +81,7 @@ The workflow will follow by:
 5. Select the desired directory
 
 
-This will create a new directory with the same name as your package include fill it with many of the necessary components to build a package. Such components include another directory called R to hold all .R files, a file called DESCRIPTION which will describe what your package does, a file called NAMESPACE to note any interactions with other packages, a .Rproj file which will maintain the project environment created by RStudio, and a .Rbuildignore file that will ignore any files contained within it if you decide to bundle your package. Aslo creates the man folder
+This will create a new directory with the same name as your package include fill it with many of the necessary components to build a package. Such components include another directory called R to hold all .R files, a file called DESCRIPTION which will describe what your package does, a file called NAMESPACE to note any interactions with other packages, a .Rproj file which will maintain the project environment created by RStudio, and a .Rbuildignore file that will ignore any files contained within it if you decide to bundle your package. Also creates the man folder
 
 ## Some R code!
 
@@ -147,3 +146,50 @@ Once you have properly noted which functions you want to export, run `devtools::
 
 # Sources
 
+
+# Other stuff
+
+
+### The Dots Argument
+
+In many R functions, an argument is included that resembles three dots as if to imply there is more to the function. The purpose of this argument is so that a user may supply other settings. For example, if your function calls upon other functions, you may use the dots argument to allow users to supply arguments to that function in your function.
+
+
+
+### NEWS.md
+
+This is the version history for the package. Each version submitted to CRAN should have a markdown heading with a bulleted list of changes.
+
+
+### Testing
+
+Most testing of your package is done informally. For example, you might write a function then load it into your environment and try it out to see that it works as you intended. The reason this is informal testing is because it is not automated. It is done ad-hoc and you might not remember the results or how you were testing. By creating more formal tests, you will have a system to repeatedly check your functions in the same way to ensure they work properly after multiple rounds of changes. 
+
+
+Hadley's book gives a detailed description to test and resources to set it up in your package.
+
+
+### Submit to cran
+
+devtools::check() will perform an R CMD check which is necessary before submitting to CRAN. 
+
+
+#### Versioning
+
+*Major*.*Minor*.*Patch*
+
+Major: big improvements/new features that change the usage of the software.
+
+Minor: smaller improvements/new features that still alter the use of the software.
+
+Patch: generally reserved for small fixes
+
+Ex. 1.2.1
+
+They work like ordered categories where say 0.0.1 < 0.1.0 < 1.0.0
+
+For development, the convention of using .9000 at the end is a recognized numbering scheme in software development for denoting the version is in development. So, if you have something like 2.0.1.9000 then you know that this version is in development. After the development is complete and you need to pick a new version then you increase the 
+
+
+
+I have been referencing the scheme utilized by the video game World of Warcraft (WoW) because they have followed the  versioning scheme and the uses for each case make sense. Major updates offer a great deal of content such as new regions or playable characters that greatly affect the game. Minor updates include new content within the regions such as a sub-region or new objectives. Patch generally addresses gameplay or character fixes. The full list of WoW versioning can be found at (https://wowpedia.fandom.com/wiki/Category:World_of_Warcraft_patches). 
