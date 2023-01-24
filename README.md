@@ -1,4 +1,4 @@
-# R Package Templete
+# Rpackage
 
 An R package is a useful tool to organize and share work. This repository holds some sample files and notes that can be used for developing an R package.
 
