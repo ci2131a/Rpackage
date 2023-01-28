@@ -1,6 +1,6 @@
 ---
-title: "sample"
-author: name
+title: "Rpackage"
+author: Your Name
 date: June 30, 2020
 output: 
   rmarkdown::html_vignette: default
@@ -19,11 +19,11 @@ knitr::opts_chunk$set(
 
 
 
-# Heading 1
+# Introduction
 
-Some text.
+This is a sample vignette to document your package.
 
-## Heading 2
+## Details
 
-
+Use this document to describe and showcase your package and its functionality.
 
