@@ -6,7 +6,7 @@ An R package is a useful tool to organize and share work. This repository holds 
 
 ## Procedure for use
 
-To use this repository as a templete:
+To use this repository as a template:
 
 1. Copy the contents of this repository to a new one (it is probably best to download the contents and upload them rather than forking).
 2. Update the sample names in all available files (DESCRIPTION, LICENSE, .Rproj, etc.).
